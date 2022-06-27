@@ -1,0 +1,138 @@
+body{
+    background: #FFEBC1;
+}
+.nave{
+    background-color: #8E3200;
+}
+
+
+
+nav img{
+    width: 50px;
+}
+
+.nav-links{
+    flex:1;
+    text-align: right;
+}
+
+.nav-links ul li{
+
+    margin-top: 5px;
+    list-style: none;
+    display: inline-block;
+    font-size: 10px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: #b8a7a7;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: red;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+
+
+
+.gradient-custom-3 {
+    /* fallback for old browsers */
+    background: #84fab0;
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
+  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5))
+  }
+  .gradient-custom-4 {
+    /* fallback for old browsers */
+    background: #84fab0;
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1));
+  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
+  }
+
+  .up{
+      background-color: #c57d10;
+  }
+
+  .imgn{
+      width: 40px;
+      height: 40px;
+  }
+
+ /* BOTOM   */
+ .detalles-pedido button{
+     position: relative;
+     padding: 0px 60px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background: rgba(0, 0, 0, 0.5);
+     margin-left: 25%;
+     text-decoration: none;
+     transition: 1s;
+     border-radius: 4px;
+     overflow: hidden;
+ }
+ .detalles-pedido button::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 400px;
+    background: var(--clr);
+    animation: animate 3s linear infinite;
+    animation-delay: calc(0.33s * var(--1));
+}
+
+
+ .detalles-pedido button:hover{
+     background: var(--clr);
+     box-shadow: 0 0 10px var(--clr),
+                 0 0 30px var(--clr),
+                 0 0 60px var(--clr),
+                 0 0 100px var(--clr) ;
+
+        
+ }
+
+
+ .detalles-pedido button:hover::before{
+     width: 120%;
+
+ }
+
+ @keyframes animate{
+     0%{
+         transform: rotate(0deg);
+     }
+     100%{
+         transform: rotate(360deg);
+     }
+
+ }
+
+ .detalles-pedido button::after{
+     content: '';
+     position: absolute;
+     inset: 2px;
+     background: #D7A86E;
+ }
+
