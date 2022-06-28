@@ -11,20 +11,20 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 nave">
-    <img class="my-0 mr-md-auto font-weight-normal imgn" src="../Img/recort.png">
-    <nav class="my-2 my-md-0 mr-md-3 nav-links" >
-        <ul>
-        <li><a class="p-2 text-white" href="inicio.php">Inicio</a></li>
-        <li><a class="p-2 text-white" href="productos.php">Productos</a></li>
-        <li><a class="p-2 text-white" href="usuarios.php">Usuarios</a></li>
-        <li><a class="p-2 text-white" href="registrarus.php">Registrar Usuario</a></li>
-        <li><a class="p-2 text-white" href="registrarprod.php">Registrar Producto</a></li>
-        <li><a class="p-2 text-white" href="transacciones.php">Transacciones</a></li>
-        <li><a class="p-2 text-white" href="../BD/out.php">Cerrar sesion</a></li>
+    <header>
+    <img class="logo" src="../Img/recort.png" alt="logo">
+    <nav >
+        <ul class="nav_links" >
+        <li><a  href="inicio.php">Inicio</a></li>
+        <li><a  href="productos.php">Productos</a></li>
+        <li><a  href="usuarios.php">Usuarios</a></li>
+        <li><a  href="transacciones.php">Transacciones</a></li>
+       
         </ul>
     </nav>
-    </div>
+    <a  href="../BD/out.php"><button>Cerrar sesion</button></a>
+    </header>
      
+    
 </body>
 </html>
