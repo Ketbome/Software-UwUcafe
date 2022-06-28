@@ -11,6 +11,9 @@ $query = mysqli_query($conexion,$sql);
 #Sacar el precio total
 while($row=mysqli_fetch_array($query)){
     $prod = $row['producto'];
+    $cantidad = $row['cantidad'];
+    $sql = "UPDATE productos SET cantidad = cantidad - $cantidad WHERE prod_name = '$prod';";#eliminar la cantidad de productos
+    $query2=mysqli_query($conexion,$sql);
     $sql = "SELECT precio FROM productos WHERE prod_name='$prod';";#buscar el precio del producto
     $query2 = mysqli_query($conexion,$sql);
     $row2=mysqli_fetch_array($query2);

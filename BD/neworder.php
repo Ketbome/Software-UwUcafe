@@ -10,7 +10,20 @@ $cantidad2 = $_POST['cantidad2'];
 $mesa = $_POST['mesa'];
 $orderstatus = $_POST['orderstatus'];
 
-$sql = "INSERT INTO pedidos(mesa, orderstatus) VALUES ('$mesa', '$orderstatus')";
+$sql = "SELECT cantidad FROM productos WHERE prod_name = '$producto1';";
+$query1 = mysqli_query($conexion,$sql);
+$row = mysqli_fetch_array($query1);
+if($row['cantidad'] < $cantidad1){
+    header("location: ../mesero/mesero.php");
+}
+$sql = "SELECT cantidad FROM productos WHERE prod_name = '$producto2';";
+$query2 = mysqli_query($conexion,$sql);
+$row = mysqli_fetch_array($query2);
+if($row['cantidad'] < $cantidad2){
+    header("location: ../mesero/mesero.php");
+}
+
+$sql = "INSERT INTO pedidos(mesa, orderstatus) VALUES ('$mesa', '$orderstatus');";
 
 if($producto1 != 'none'){
     $sql2 = "INSERT INTO pedidos_productos(mesa, producto, cantidad) VALUES ('$mesa', '$producto1', $cantidad1)";
