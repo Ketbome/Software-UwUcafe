@@ -21,28 +21,52 @@
 }
 
 .contenedor-pedidos::-webkit-scrollbar{
-	width: 7px;
+	width: 0px;
 }
 
-.contenedor-pedidos::-webkit-scrollbar-thumb{
-	background: #7c3c00;
+.pedido h3{
+	color: white;
+	text-align: left;
+}
+
+.pedido h5{
+
+	color: white;
+
 }
 
 .pedido{
 	display: flex;
 	justify-content: space-around;
-	background-color: #A64B2A;
-	border-radius: 30px;
-	align-items: center;
+	border-radius: 10px;
+	background-image: url(../Img/fondo.jpg);
+	background-size:contain ;
+	position: relative;
+	z-index: 1;
+    align-items:center;
 
+}
+
+.pedido::after{
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-radius: 10px;
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	opacity: 0.7;
+	z-index: -1;
 }
 
 .pedido-img img{
-	width: 60px;
-	height:60px ;
-	border-radius: 80%;
+	height: 80px;
+	width: 80px;
+	margin-bottom: 20px;
 	
 }
+
 
 .pedido-img{
      flex-basis:100px;
