@@ -20,7 +20,7 @@ while($row=mysqli_fetch_array($query)){
     $preciototal = $preciototal + ($row2['precio'] * $row['cantidad']);#sacar el total
 }
 
-$sql = "INSERT INTO transacciones(precio) VALUES ($preciototal);";
+$sql = "INSERT INTO transacciones(precio,fecha) VALUES ($preciototal,NOW());";
 $query=mysqli_query($conexion,$sql);
 
 $sql="DELETE FROM pedidos WHERE mesa=$mesa;";
