@@ -1,3 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 10%;
+    background-color: #24252A;
+}
+
+.logo{
+    cursor: pointer;
+    width: 50px;
+}
+
+.nav_links{
+    list-style: none;
+    display: flex;
+}
+
+.nav_links li {
+    padding: 0px 20px;
+}
+
+button{
+    font-family: "Montserrant", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+.nav_links li a {
+    font-family: "Montserrant", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    color: #0088a9;
+}
+
+button {
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+}
+
+/*
 body{
     background: #FFEBC1;
 }
@@ -46,7 +112,7 @@ nav img{
 }
 
 
-
+*/
 
 .gradient-custom-3 {
     /* fallback for old browsers */
@@ -136,3 +202,12 @@ nav img{
      background: #D7A86E;
  }
 
+
+
+
+
+
+
+
+
+ 
