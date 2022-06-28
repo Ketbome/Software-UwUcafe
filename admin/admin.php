@@ -20,6 +20,7 @@
         <li><a class="p-2 text-white" href="usuarios.php">Usuarios</a></li>
         <li><a class="p-2 text-white" href="registrarus.php">Registrar Usuario</a></li>
         <li><a class="p-2 text-white" href="registrarprod.php">Registrar Producto</a></li>
+        <li><a class="p-2 text-white" href="transacciones.php">Transacciones</a></li>
         <li><a class="p-2 text-white" href="../BD/out.php">Cerrar sesion</a></li>
         </ul>
     </nav>
