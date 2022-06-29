@@ -21,7 +21,11 @@
 .btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] { filter: none; background-color: #4a77d4; }
 .btn-block { width: 100%; display:block; }
 
-* { -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing:border-box; }
+* {
+	
+	
+	
+	-webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing:border-box; }
 
 html { width: 100%; height:100%; overflow:hidden; }
 
@@ -30,7 +34,15 @@ body {
 	height:100%;
 	font-family: 'Open Sans', sans-serif;
 	background-color: #7c3c00;
+
+	background-image: url(/Img/fondo3.jpg);
+	background-size:cover ;
+	position: relative;
+	z-index: 1;
 }
+
+
+
 .login { 
 	position: absolute;
 	top: 50%;
@@ -38,7 +50,17 @@ body {
 	margin: -150px 0 0 -150px;
 	width:300px;
 	height:300px;
+
+	content: '';
+	position: absolute;
+
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	opacity: 0.94;
+	z-index: -1;
+	
 }
+
+
 .login h1 { color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px; text-align:center; }
 
 .textwhite{
@@ -48,6 +70,7 @@ body {
 input { 
 	width: 100%; 
 	margin-bottom: 10px; 
+	
 	background: rgba(0,0,0,0.3);
 	border: none;
 	outline: none;
