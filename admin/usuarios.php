@@ -5,11 +5,16 @@
     $query=mysqli_query($conexion,$sql);
     
 ?>
+
+<style>
+
+</style>
+
 <?php
 include_once("admin.php");
 ?>
     <body class="text-dark">
-            <div class="container mt-5">
+            <div class="contenedor container mt-5">
                     <div class="row"> 
                         <div class="col-md-12">
                             <table class="table" >
@@ -41,6 +46,11 @@ include_once("admin.php");
                             </table>
                         </div>
                     </div>  
+            </div>
+
+            <div class="contendor-boton">
+                   <button class="boton uno">
+                   <a href="registrarus.php">Agregar</a></button>
             </div>
     </body>
 </html>

@@ -84,6 +84,7 @@ h4{
 }
 
 
+
 </style>
 
 <body class="text-white">
@@ -92,7 +93,8 @@ h4{
 <section class="incio">
     <div class="columna row2 text-dark">
         <h2>All Products</h2>
-
+        <button class="especial">
+        <a href="registrarprod.php">Agregar</a></button>
     </div>
 
 </section>

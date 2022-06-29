@@ -54,6 +54,39 @@ input {
 	transition: box-shadow .5s ease;
 }
 input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); }
+
+
+.card{
+  margin-top:25px;
+  background-image: url(../Img/fondo2.jpg);
+	background-size:contain ;
+	position: relative;
+	z-index: 1;
+}
+
+.card::after{
+  content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-radius: 10px;
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	opacity: 0.8;
+	z-index: -1;
+}
+
+.card h2{
+	color: white;
+
+}
+
+.card label{
+
+	color: white;
+
+}
 </style>
 
   <script>
