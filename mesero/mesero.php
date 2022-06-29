@@ -1,4 +1,6 @@
 <style>
+
+    
 .contenedor{
     
     width: 95%;
@@ -30,26 +32,49 @@
 }
 
 .contenedor-pedidos::-webkit-scrollbar{
-	width: 7px;
+	width: 0px;
 }
 
-.contenedor-pedidos::-webkit-scrollbar-thumb{
-	background: #7c3c00;
+.pedido h3{
+	color: white;
+	text-align: left;
+}
+
+.pedido h5{
+
+	color: white;
+
 }
 
 .pedido{
 	display: flex;
 	justify-content: space-around;
-	background-color: #A64B2A;
-	border-radius: 30px;
-	align-items: center;
+	border-radius: 10px;
+	background-image: url(../Img/fondo.jpg);
+	background-size:contain ;
+	position: relative;
+	z-index: 1;
+    align-items:center;
 
 }
 
+.pedido::after{
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-radius: 10px;
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	opacity: 0.7;
+	z-index: -1;
+}
+
 .pedido-img img{
-	width: 60px;
-	height:60px ;
-	border-radius: 80%;
+	height: 80px;
+	width: 80px;
+	margin-bottom: 20px;
 	
 }
 
@@ -75,15 +100,36 @@
 }
 
 .contenedor-agregar{
-	background: #D7A86E;
+    background-image: url(../Img/fondo2.jpg);
+	background-size:contain ;
+	position: relative;
+	z-index: 1;
 	height: 570px;
 	padding: 25px 30px;
 	border-radius: 5px;
 }
 
+.contenedor-agregar::after{
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-radius: 10px;
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	opacity: 0.8;
+	z-index: -1;
+}
+
 .contenedor-agregar .titulo{
 	font-size: 25px;
 	font-weight: 500;
+    color: #edf0f1;
+}
+
+.contenedor-agregar label{
+    color: #edf0f1;
 }
 
 
@@ -112,20 +158,17 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 nave">
-    <img class="my-0 mr-md-auto font-weight-normal imgn" src="../Img/recort.png">
-    <nav class="my-2 my-md-0 mr-md-3">
-        <a class="p-2 text-white" href="mesero.php">Inicio</a>
-        <a class="p-2 text-white" href="../BD/out.php">Cerrar sesion</a>
-    </nav>
-    </div>
-    <div class="bgcolor">
+<header>
+    <img class="logo" src="../Img/recort.png" alt="logo">
+    <nav >
+        <ul class="nav_links" >
 
-    </div>
-</body>
-</html>
-<html>
-    <body >
+       
+        </ul>
+    </nav>
+    <a  href="../BD/out.php"><button>Cerrar sesion</button></a>
+    </header>
+
 
     
         <!-- Preparados -->
@@ -223,7 +266,7 @@
 
                 <div class="pedido-listo">
                 <a href="Mod.php? id=<?php echo $row['mesa'] ?>" class="btn btn-danger">Modificar</a>
-                <a href="../BD/delpedido2.php? id=<?php echo $row['mesa'] ?>" class="btn btn-danger">Eliminar</a>
+                <a href="../BD/delpedido.php? id=<?php echo $row['mesa'] ?>" class="btn btn-danger">Eliminar</a>
 				</div>
 
 			</div>
