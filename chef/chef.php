@@ -21,26 +21,49 @@
 }
 
 .contenedor-pedidos::-webkit-scrollbar{
-	width: 7px;
+	width: 0px;
 }
 
-.contenedor-pedidos::-webkit-scrollbar-thumb{
-	background: #7c3c00;
+.pedido h3{
+	color: white;
+	text-align: left;
+}
+
+.pedido h5{
+
+	color: white;
+
 }
 
 .pedido{
 	display: flex;
 	justify-content: space-around;
-	background-color: #A64B2A;
-	border-radius: 30px;
-	align-items: center;
+	border-radius: 10px;
+	background-image: url(../Img/fondo.jpg);
+	background-size:contain ;
+	position: relative;
+	z-index: 1;
+    align-items:center;
 
 }
 
+.pedido::after{
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-radius: 10px;
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	opacity: 0.7;
+	z-index: -1;
+}
+
 .pedido-img img{
-	width: 60px;
-	height:60px ;
-	border-radius: 80%;
+	height: 80px;
+	width: 80px;
+	margin-bottom: 20px;
 	
 }
 
@@ -85,21 +108,18 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 nave">
-    <img class="my-0 mr-md-auto font-weight-normal imgn" src="../Img/recort.png">
-    <nav class="my-2 my-md-0 mr-md-3">
-        <a class="p-2 text-white" href="chef.php">Inicio</a>
-        <a class="p-2 text-white" href="../BD/out.php">Cerrar sesion</a>
+<header>
+    <img class="logo" src="../Img/recort.png" alt="logo">
+    <nav >
+        <ul class="nav_links" >
+
+       
+        </ul>
     </nav>
-    </div>
-    <div class="bgcolor">
+    <a  href="../BD/out.php"><button>Cerrar sesion</button></a>
+    </header>
 
-    </div>
-</body>
-</html>
 
-<html>
-    <body >
 
     
         <!-- Productos -->
