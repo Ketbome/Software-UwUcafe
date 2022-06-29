@@ -26,13 +26,12 @@ img{
 
 .index{
 	width: 100%;
-	background: #24252A;
 	height: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	background-image: url(/Img/fondo3.jpg);
-	background-size:contain ;
+	background-size: cover;
 	position: relative;
 	z-index: 1;
 
