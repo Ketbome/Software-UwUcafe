@@ -266,7 +266,7 @@
 
                 <div class="pedido-listo">
                 <a href="Mod.php? id=<?php echo $row['mesa'] ?>" class="btn btn-danger">Modificar</a>
-                <a href="../BD/delpedido.php? id=<?php echo $row['mesa'] ?>" class="btn btn-danger">Eliminar</a>
+                <a href="../BD/delpedido2.php? id=<?php echo $row['mesa'] ?>" class="btn btn-danger">Eliminar</a>
 				</div>
 
 			</div>
