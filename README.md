@@ -15,6 +15,8 @@ CREATE TABLE productos(
      prod_name CHAR(30) NOT NULL,
      cantidad INT(15) NOT NULL,
      precio INT NOT NULL,
+     mejor INT,
+     maspedido INT,
      PRIMARY KEY (id)
 );
 
@@ -45,9 +47,9 @@ INSERT INTO usuarios(username,password,type) VALUES ('chef','chef','Chef');
 INSERT INTO usuarios(username,password,type) VALUES ('Agustina','admin','Chef');
 INSERT INTO usuarios(username,password,type) VALUES ('Clara','admin','Cajero');
 
-INSERT INTO productos(prod_name,cantidad,precio) VALUES ('Café',52,1200);
-INSERT INTO productos(prod_name,cantidad,precio) VALUES ('Banana',24,500);
-INSERT INTO productos(prod_name,cantidad,precio) VALUES ('Chocolate',70,2500);
-INSERT INTO productos(prod_name,cantidad,precio) VALUES ('Pan con queso',1000,1500);
-INSERT INTO productos(prod_name,cantidad,precio) VALUES ('Brownie',56,1200);
-INSERT INTO productos(prod_name,cantidad,precio) VALUES ('Churrasco',30,3200);
+INSERT INTO productos(prod_name,cantidad,precio,mejor,maspedido) VALUES ('Café',52,1200,0,0);
+INSERT INTO productos(prod_name,cantidad,precio,mejor,maspedido) VALUES ('Banana',24,500,0,0);
+INSERT INTO productos(prod_name,cantidad,precio,mejor,maspedido) VALUES ('Chocolate',70,2500,0,0);
+INSERT INTO productos(prod_name,cantidad,precio,mejor,maspedido) VALUES ('Pan con queso',1000,1500,0,0);
+INSERT INTO productos(prod_name,cantidad,precio,mejor,maspedido) VALUES ('Brownie',56,1200,0,0);
+INSERT INTO productos(prod_name,cantidad,precio,mejor,maspedido) VALUES ('Churrasco',30,3200,0,0);

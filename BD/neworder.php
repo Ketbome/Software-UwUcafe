@@ -29,23 +29,32 @@ elseif($row['cantidad'] - $cantidad2 < 0){
     header("location: ../mesero/mesero.php");
 }
 
-$sql = "INSERT INTO pedidos(mesa, orderstatus) VALUES ('$mesa', '$orderstatus');";
+$sql = "SELECT mesa FROM pedidos WHERE mesa = $mesa;";
+$query = mysqli_query($conexion,$sql);
+$row3 = mysqli_fetch_array($query);
+
+if(!isset($row3['mesa'])){
+    $sql = "INSERT INTO pedidos(mesa, orderstatus) VALUES ('$mesa', '$orderstatus');";
+    $query = mysqli_query($conexion,$sql);
+}
 
 if($producto1 != 'none'){
     $sql2 = "INSERT INTO pedidos_productos(mesa, producto, cantidad) VALUES ('$mesa', '$producto1', $cantidad1)";
     $conexion->query($sql2);
+    $sql2 = "UPDATE productos SET cantidad = cantidad - $cantidad1 WHERE prod_name = '$producto1';";#eliminar la cantidad de productos
+    $query2=mysqli_query($conexion,$sql2);
 }
 if($producto2 != 'none'){
     $sql3 = "INSERT INTO pedidos_productos(mesa, producto, cantidad) VALUES ('$mesa', '$producto2', $cantidad2)";
     $conexion->query($sql3);
+    $sql2 = "UPDATE productos SET cantidad = cantidad - $cantidad2 WHERE prod_name = '$producto2';";#eliminar la cantidad de productos
+    $query2=mysqli_query($conexion,$sql2);
 }
 
-if ($conexion->query($sql) === TRUE) {
     if($type == 'Mesero'){
         header("location: ../mesero/mesero.php");
     }else{
         header("location: ../admin/inicio.php");
     }
-}
 $conexion->close();
 ?>

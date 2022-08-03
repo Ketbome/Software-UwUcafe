@@ -169,6 +169,7 @@ img{
 .menu li:hover .down-item, .menu li:hover .text-item{
 	top: 100%;
 	height: 115%;
+	
 }
 
 .menu li:hover .imagen{

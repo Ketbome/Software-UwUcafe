@@ -65,6 +65,8 @@ h4{
 .page-btn{
     margin: 0 auto 80px;
     text-align: end;
+    color:#24252A;
+
 }
 
 .page-btn span{
@@ -100,6 +102,8 @@ h4{
 </section>
 
 <!--Prodcutos-->
+
+
 
 <section class="productos">
     <div class="columna">
